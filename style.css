@@ -1,28 +1,91 @@
-body {
-    font-family: Arial, sans-serif;
+/* style.css */
+
+/* BASIC RESET */
+* {
     margin: 0;
-    padding: 20px;
-    background-color: #f0f0f0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+body {
+    background-color: #f9f9f9;
+    color: #111;
+    line-height: 1.6;
+    padding: 20px;
+}
+
 h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ff0000; /* YouTube red vibe */
+}
+
+h2 {
+    margin-bottom: 10px;
     color: #333;
 }
+
+/* SECTION STYLING */
 section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
     margin-bottom: 20px;
-    padding: 15px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
+
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* PROGRESS BAR */
 .progress-container {
     width: 100%;
     background-color: #e0e0e0;
-    border-radius: 8px;
+    border-radius: 25px;
     overflow: hidden;
+    height: 25px;
+    margin-bottom: 10px;
 }
+
 .progress-bar {
-    height: 20px;
-    background-color: #76c7c0;
-    width: 0;
-    transition: width 0.5s;
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ff0000, #cc0000);
+    border-radius: 25px 0 0 25px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* SPANS */
+#goal-info span {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+/* LAST/FIRST VIDEO & SUBSCRIBERS */
+#last-subscriber, #first-subscriber, #old-names, #first-video, #last-video, #start-date {
+    font-style: italic;
+    color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .progress-container {
+        height: 20px;
+    }
 }
